@@ -196,11 +196,11 @@ TestSSH <- R6Class(
                -o LogLevel=error
                {private$url} {private$verbose}}", wrap = TRUE)
       # suppress the warning about adding the IP to .ssh/known_hosts
-      system2("ssh", c(
-        "-o", "LogLevel=error",
-        "-i", file.path("~", ".ssh", private$private_key_name),
-        private$url, private$verbose
-      ))
+      # system2("ssh", c(
+      #   "-o", "LogLevel=error",
+      #   "-i", file.path("~", ".ssh", private$private_key_name),
+      #   private$url, private$verbose
+      # ))
     }
   ),
 
